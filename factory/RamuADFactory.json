@@ -1,0 +1,14 @@
+{
+	"name": "RamuADFactory",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6b390f58-e0bf-4b36-8a26-55aae0f0f3a6",
+		"tenantId": "a86f1b05-3b8d-416f-81cb-406ed949b7e3"
+	}
+}
