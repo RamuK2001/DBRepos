@@ -11,3 +11,7 @@ df.show()
 # COMMAND ----------
 
 df.write.mode("append").option("mergeSchema","true").saveAsTable("DB2.VehicleDetails")
+
+# COMMAND ----------
+
+display(df.select("Price","VehicleName").show())
