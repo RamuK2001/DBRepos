@@ -5,7 +5,7 @@ variables:
   databricks-host: 'https://adb-4681293741780341.1.azuredatabricks.net'
   notebook-folder: '/Users/ramukarnati2000@gmail.com/'
   cluster-id: '0120-115431-ogwa01lf'
-  notebook-name: 'AzureDBNotebook1'
+  notebook-name: 'ParametersNotebook'
 
 steps:
 - task: UsePythonVersion@0
@@ -34,7 +34,7 @@ steps:
    while [ $job_status = "RUNNING" ] || [ $job_status = "PENDING" ]
    do
      sleep 2
-     job_status=$(databricks runs get --run-id $RUN_ID | jq -r '.state.life_cycle_state')
+     job_status=$(databricks runs get --run-id $RUN_ID --notebook-params '{"writeMode": "append"}' | jq -r '.state.life_cycle_state')
      echo Status $job_status
    done
 
