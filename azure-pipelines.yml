@@ -1,5 +1,5 @@
 trigger:
-  - main
+  - master
 
 variables:
   databricks-host: 'https://adb-4681293741780341.1.azuredatabricks.net'
