@@ -3,7 +3,7 @@ trigger:
 
 variables:
   databricks-host: 'https://adb-4681293741780341.1.azuredatabricks.net'
-  notebook-folder: '/Shared/tmp/tmp1/'
+  notebook-folder: '/Users/ramukarnati2000@gmail.com/'
   cluster-id: '0120-115431-ogwa01lf'
   notebook-name: 'AzureDBNotebook1'
 
@@ -16,8 +16,6 @@ steps:
   displayName: 'Install databricks-cli'
 
 - script: |
-
-   databricks workspace import_dir notebooks/ $(notebook-folder) -o
 
    JOB_ID=$(databricks jobs create --json '{
      "name": "Testrun",
