@@ -11,6 +11,8 @@ if(writeMode == "append"):
     result = dbutils.notebook.run("AppendNotebook",60)
 elif(writeMode == "overwrite"):
     result = dbutils.notebook.run("OverwriteNotebook",60)
+elif(writeMode == "delete"):
+    result = dbutils.notebook.run("DeleteNotebook",60)
 else:
     dbutils.notebook.exit("Wrong input parameter")
 
