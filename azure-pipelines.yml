@@ -28,7 +28,7 @@ steps:
      }
    }' | jq '.job_id')
 
-   RUN_ID=$(databricks jobs run-now --job-id $JOB_ID --notebook-params '{"writeMode": "append"}' | jq '.run_id')
+   RUN_ID=$(databricks jobs run-now --job-id $JOB_ID --notebook-params '{"writeMode": "$(writeMode)"}' | jq '.run_id')
 
    job_status="PENDING"
    while [ $job_status = "RUNNING" ] || [ $job_status = "PENDING" ]
