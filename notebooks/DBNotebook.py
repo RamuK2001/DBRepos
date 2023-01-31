@@ -14,8 +14,8 @@ elif(writeMode == "overwrite"):
 elif(writeMode == "delete"):
     result = dbutils.notebook.run("DeleteNotebook",60)
 else:
-    dbutils.notebook.exit("Wrong input parameter")
+    result = "Wrong input parameter"
 
 # COMMAND ----------
 
-print(result)
+dbutils.notebook.exit(result)
