@@ -3,9 +3,9 @@ trigger:
 
 variables:
   databricks-host: 'https://adb-4681293741780341.1.azuredatabricks.net'
-  notebook-folder: '/Users/ramukarnati2000@gmail.com/'
+  notebook-folder: '/Users/ramukarnati2000@gmail.com/tmp/'
   cluster-id: '0120-115431-ogwa01lf'
-  notebook-name: 'ParametersNotebook'
+  notebook-name: 'DBNotebook'
 
 steps:
 - task: UsePythonVersion@0
