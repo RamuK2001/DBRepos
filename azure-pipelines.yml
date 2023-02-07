@@ -23,7 +23,7 @@ steps:
      "timeout_seconds": 3600,
      "max_retries": 1,
      "notebook_task": {
-       "notebook_path": "$(notebook-folder)$(notebook-name)",
+       "notebook_path": "$(notebook-name)",
        "base_parameters": {}
      }
    }' | jq '.job_id')
